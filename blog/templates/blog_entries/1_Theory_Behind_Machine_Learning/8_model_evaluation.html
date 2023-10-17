@@ -1,0 +1,40 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/quality.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Model Evaluation</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<p>
+  Comparing the accuracy of different algorithms is an essential step in model development. However, it's important to recognize that <span>training error</span>, or perfect accuracy on the training data, is a misleading practice. Training error doesn't reflect how a model performs on unseen data, which is the ultimate goal.
+</p>
+<h2 class="table-content-item">
+  Test Error
+</h2>
+<p>
+  Test error is a critical metric in model evaluation. It measures the model's performance on data it hasn't seen during training. It provides a realistic estimate of how well the model will generalize to new, unseen data. Test error helps identify overfitting, where a model performs exceptionally well on training data but poorly on test data, indicating that it has memorized the training data rather than learned general patterns.
+</p>
+<h2 class="table-content-item">
+  Hold-Out Validation
+</h2>
+<p>
+  Given the challenges of obtaining extensive and diverse data, it's common practice to split the dataset into two parts: a training set and a validation set (or test set). The hold-out validation technique allows us to train the model on one portion and assess its performance on another, providing an initial evaluation of model effectiveness.
+</p>
+<h2 class="table-content-item">
+  Cross-Validation
+</h2>
+<p>
+  Cross-validation is a more robust approach that reduces the dependence on a specific test dataset. It involves repeatedly dividing the data into training and test sets and averaging the results over multiple iterations.
+</p>
+<h2 class="table-content-item">
+  K-Fold Cross-Validation
+</h2>
+<p>
+  In K-fold cross-validation, the dataset is divided into k equally-sized, disjoint subsets. The model is trained k times, each time using k-1 subsets for training and the remaining subset for testing. The process is repeated k times, ensuring that each subset serves as a test set once. The final evaluation is the average of these k test results, which reduces the potential impact of data-specific variability on the model's assessment.
+</p>
+{% endblock %}

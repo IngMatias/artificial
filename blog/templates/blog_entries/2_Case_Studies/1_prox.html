@@ -1,0 +1,13 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/book.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Prox</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+{% endblock %}

@@ -1,0 +1,158 @@
+:root {
+  --entry-max-width: 800px;
+}
+
+.entry-content {
+  max-width: var(--entry-max-width);
+
+  padding: 20px;
+  animation: .1s ease-in 0s 1 init;
+  
+  .entry-header {
+    margin-bottom: 36px;
+
+    display: flex;
+    justify-content: start;
+    & img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .meta-div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .meta {
+        margin-top: 8px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .content {
+    .code {
+      padding: 16px;
+      margin-bottom: 32px;
+      
+      border-radius: 4px;
+
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+
+      color: #fff;
+      background-color: #282c34;
+    }
+  }
+
+  & h1 {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  & h2 {
+    margin-bottom: 24px;
+    
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  & p {
+    margin-bottom: 32px;
+    
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  & ol, & ul {
+    margin-bottom: 32px;
+    margin-left: 32px;
+    
+    & li {      
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+
+  & ol {
+    & li {
+    }
+  }
+
+  & ul {
+    & li {
+      list-style: none;
+    }
+  }
+
+  .img-container {
+    width: 50%;
+    
+    margin: auto;
+    margin-bottom: 32px;
+    
+    & img {
+      max-width: 100%;
+    }
+  }
+
+
+  & span {
+    font-weight: bold;
+  }
+  
+  & h1,
+  .meta,
+  & h2,
+  & p,
+  & li {
+    color: #fafafa;
+  }
+}
+
+.table-content {
+  width: 200px;
+  max-width: 200px;
+  
+  position: fixed;
+  right: 32px;
+
+  & h3 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  & ul {
+    & li {
+      list-style: none;
+      margin-bottom: 8px;
+      & a {
+        color: #555;
+        
+        font-size: 12px;
+        text-decoration: none;
+
+        &:hover {
+          color: #fafafa;
+          background-color: #3c4654;
+        }
+      }
+
+      .active {
+        color: #fafafa;
+        background-color: #3c4654;
+      }
+    }
+  }
+}
+
+@media (max-width: 65rem) {
+  .entry-content {
+    .table-content {
+      display: none;
+    }
+  }
+}

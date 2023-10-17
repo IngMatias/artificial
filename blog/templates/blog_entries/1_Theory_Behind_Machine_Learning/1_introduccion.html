@@ -1,0 +1,134 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/book.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Introduction</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<h2 class="table-content-item">
+  Artificial Intelligence, Machine Learning, Data Mining, Statistical Analysis
+</h2>
+<h3>
+  Artificial Intelligence:
+</h3>
+<p>
+  The field of computer science dedicated to creating machines and software that can perform tasks requiring human-like intelligence, such as understanding natural language, recognizing patterns, and making decisions.
+</p>
+<h3>
+  Machine Learning:
+</h3>
+<p>
+  A subfield of artificial intelligence that involves training algorithms to automatically learn patterns and make predictions or decisions based on data. It encompasses various types of learning, including supervised learning and unsupervised learning.
+</p>
+<h3>
+  Data Mining:
+</h3>
+<p>
+  A technical, automated or semi-automated process that sifts     through vast amounts of disparate information to extract meaningful   patterns and transform it into actionable knowledge.
+</p>
+<h3>
+  Statistical Analysis:
+</h3>
+<p>
+  A mathematical toolset used for the development and application of probabilistic techniques to correctly analyze numerical information or draw conclusions from data.
+</p>
+<h2 class="table-content-item">
+  Cross Industry Standard Process for Data Mining (CRISP-DM)
+</h2>
+<div class="img-container">
+  <img src="{% static 'imgs/CRISP-DM.png' %}"/>
+</div>
+<p>
+  Cross Industry Standard Process for Data Mining (CRISP-DM) is a well-established, open-standard model that guides the data mining process, offering a structured approach used by experts in the field.
+</p>
+<p>
+  Comprising six main iterative phases, CRISP-DM provides flexibility in its application: Business Understanding, Data Understanding, Data Preparation, Modeling, Evaluation, and Deployment. Importantly, these phases can be adapted and may overlap, allowing for a dynamic approach.
+</p>
+<p>
+  Within each of these phases, tasks and activities are outlined without prescribing a rigid methodology for their execution. This flexibility allows for creative problem-solving and tailoring to specific project needs.
+</p>
+<p>
+  <span>Business Understanding</span>: This phase involves comprehending the business context, addressing specific questions or concerns, and fostering intensive communication between the client or stakeholders and the technical team. It is crucial to establish a clear understanding of the project's objectives and how data mining can contribute to solving business problems.
+</p>
+<p>
+  <span>Data Understanding</span>: Here, the technical team conducts exploratory data analysis to gain an initial understanding of the available data. This phase provides insight into the data's potential and helps assess the project's feasibility and expected outcomes. It's about uncovering patterns, trends, and anomalies in the data.
+</p>
+<p>
+  <span>Data Preparation</span>: Data Preparation encompasses all activities required to construct the final dataset for analysis. This involves data cleaning, transformation, and integration to ensure the data is in a suitable format for modeling.
+</p>
+<p>
+  <span>Modeling</span>: In the Modeling phase, the technical team leverages various algorithms and techniques to create predictive models or discover patterns within the data. This phase serves as the core of the data mining process, where models are developed and refined to derive meaningful insights.
+</p>
+<p>
+  <span>Evaluation</span>: During Evaluation, the quality and effectiveness of the models and results are assessed. It involves validating the models against real-world data and determining how well they meet the project's objectives. This phase guides decisions on which models to deploy and how to use them effectively.
+</p>
+<p>
+  <span>Deployment</span>: The Deployment phase is where the models and findings from the data mining process are put into practical use within the organization. This often involves integrating the models into operational systems or decision-making processes.
+</p>
+<h2 class="table-content-item">
+  Limitations of CRISP-DM
+</h2>
+<p>
+  CRISP-DM was initially developed in 1997 when data projects typically had well-defined objectives from the outset. Over the past two decades, the scope of data projects has expanded, sometimes requiring more exploratory approaches. Consequently, the term "Data Mining" has evolved into "Data Science" to encompass a broader range of data-related activities beyond traditional mining techniques.
+</p>
+<h2 class="table-content-item">
+  Alternative to CRISP-DM: KDD: Knowledge Discovery in Databases
+</h2>
+<p>
+  Before we look at the differences between KDD and CRISP-DM, we’ll take a look at the steps of KDD first.
+</p>
+<ol>
+  <li>
+    Setting Goal and Application Understanding
+  </li>
+  <li>
+    Data Integration
+  </li>
+  <li>
+    Data Cleaning
+  </li>
+  <li>
+    Data Transformation
+  </li>
+  <li>
+    Data Mining
+  </li>
+  <li>
+    Knowledge Representation
+  </li>
+</ol>
+<p>
+  The main differences in this case is at the business understanding stage because there is no such stage in KDD in addition, CRISP-DM has reversible steps that provide more convenience in data mining. Since the stages can be reversed, any misstep can be fixed without completing the entire cycle.
+</p>
+<h2 class="table-content-item">
+  Alternative to CRISP-DM: SEMMA
+</h2>
+<p>
+  SEMMA is an acronym that stands for:
+</p>
+<ol>
+  <li>
+    Sample
+  </li>
+  <li>
+    Explore
+  </li>
+  <li>
+    Modify
+  </li>
+  <li>
+    Model
+  </li>
+  <li>
+    Assess
+  </li>
+</ol>
+<p>
+  SEMMA focuses on the technical aspects of development, unlike CRISP-DM, which places a greater emphasis on the technical aspects of development. This difference is reflected in the absence of a prior understanding phase and a final stage of result exploitation
+</p>
+{% endblock %}

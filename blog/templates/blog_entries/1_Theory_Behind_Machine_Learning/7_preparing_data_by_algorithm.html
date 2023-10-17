@@ -1,0 +1,153 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/workflow.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Preparing Data By Algorithm</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<div class="img-container" style="width: 100%;">
+  <img class="icon" src="{% static 'imgs/machine-learning-cheet-sheet.png' %}"/>
+</div>
+<h2 class="table-content-item">
+  Linear Regression
+</h2>
+<span class="code" style="display: block;">
+  Type: Lineal, Regression
+</span>
+<ul>
+  <li>
+    <span>Linear Assumption</span>: Linear regression assumes that the relationship between your input and output is linear. It does not support anything else.
+  </li>
+  <li>
+    <span>Remove Noise</span>: Linear regression assumes that your input and output variables are not noisy. This is most important for the output variable and you want to remove outliers in the output variable if possible.
+  </li>
+  <li>
+    <span>Remove Collinearity</span>: Linear regression will over-fit your data when you have highly correlated input variables. Consider calculating pairwise correlations for your input data and removing the most correlated.
+  </li>
+  <li>
+    <span>Gaussian Distributions</span>: Linear regression will make more reliable predictions if your input and output variables have a Gaussian distribution.
+  </li>
+  <li>
+    <span>Rescale Inputs</span>: Linear regression will often make more reliable predictions if you rescale input variables using standardization or normalization.
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  Logistic Regression
+</h2>
+<span class="code" style="display: block;">
+  Type: Lineal, Classification
+</span>
+<ul>
+  <li>
+    <span>Binary Output Variable</span>: Logistic regression is intended for binary (two-class) classification problems. 
+  </li>
+  <li>
+    <span>Remove Noise</span>: Logistic regression assumes no error in the output variable, consider removing outliers and possibly misclassified instances from your training data.
+  </li>
+  <li>
+    <span>Gaussian Distribution</span>: Logistic regression assume a linear relationship between the input variables with the output. Data transforms of your input variables that better expose this linear relationship can result in a more accurate model.
+  </li>
+  <li>
+    <span>Remove Correlated Inputs</span>: The model can overfit if you have multiple highly-correlated inputs. Consider calculating the pairwise correlations between all inputs and removing highly correlated inputs.
+  </li>
+  <li>
+    <span>Fail to Converge</span>: This can happen if there are many highly correlated inputs in your data or the data is very sparse (e.g. lots of zeros in your input data).
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  Linear Discriminant Analysis
+</h2>
+<span class="code" style="display: block;">
+  Type: Lineal, Classification
+</span>
+<ul>
+  <li>
+    <span>Classification Problems</span>: LDA supports both binary and multiclass classification.
+  </li>
+  <li>
+    <span>Gaussian Distribution</span>: The standard implementation of the model assumes a Gaussian distribution of the input variables.
+  </li>
+  <li>
+    <span>Remove Outliers</span>: Consider removing outliers from your data.
+  </li>
+  <li>
+    <span>Same Variance</span>: LDA assumes that each input variable has the same variance.
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  Naïve Bayes
+</h2>
+<span class="code" style="display: block;">
+  Type: Non Lineal, Classification
+</span>
+<ul>
+  <li>
+    <span>Categorical Inputs</span>: Naive Bayes assumes label attributes such as binary, categorical or nominal.
+  </li>
+  <li>
+    <span>Gaussian Inputs</span>: If the input variables are real-valued, a Gaussian distribution is assumed. In which case the algorithm will perform better if the univariate distributions of your data are Gaussian or near-Gaussian. This may require removing outliers (e.g. values that are more than 3 or 4 standard deviations from the mean).
+  </li>
+  <li>
+    <span>Classification Problems</span>: Naive Bayes is a classification algorithm suitable for binary and multiclass classification.
+  </li>
+  <li>
+    <span>Log Probabilities</span>: The calculation of the model involves multiplying a lot of small numbers together. This can lead to an underflow of numerical precision. As such it is good practice to use a log transform of the probabilities to avoid this underflow.
+  </li>
+  <li>
+    <span>Kernel Functions</span>: Rather than assuming a Gaussian distribution for numerical input values, more complex distributions can be used such as a variety of kernel density functions.
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  K-Nearest Neighbors
+</h2>
+<span class="code" style="display: block;">
+  Type: Non Lineal, Classification, Regression
+</span>
+<ul>
+  <li>
+    <span>Rescale Data</span>: KNN performs much better if all of the data has the same scale. Normalizing your data to the range between 0 and 1 is a good idea. It may also be a good idea to standardize your data if it has a Gaussian distribution.
+  </li>
+  <li>
+    <span>Address Missing Data</span>: Missing data will mean that the distance between samples cannot be calculated. These samples could be excluded or the missing values could be imputed.
+  </li>
+  <li>
+    <span>Lower Dimensionality</span>: KNN is suited for lower dimensional data. You can try it on high dimensional data (hundreds or thousands of input variables) but be aware that it may not perform as well as other techniques. KNN can benefit from feature selection that reduces the dimensionality of the input feature space.
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  Desition Tree
+</h2>
+<span class="code" style="display: block;">
+  Type: Non Lineal, Regression, Classification
+</span>
+<ul>
+  <li>
+    Bagged CART does not require any special data preparation other than a good representation of the problem.
+  </li>
+</ul>
+
+<h2 class="table-content-item">
+  Support Vector Machines
+</h2>
+<span class="code" style="display: block;">
+  Type: Non Lineal, Classification
+</span>
+<ul>
+  <li>
+    <span>Numerical Inputs</span>: SVM assumes that your inputs are numeric. If you have categorical inputs you may need to covert them to binary dummy variables (one variable for each category).
+  </li>
+  <li>
+    <span>Binary Classification</span>: Basic SVM as described in this chapter is intended for binary (two-class) classification problems. Although, extensions have been developed for regression and multiclass classification.
+  </li>
+</ul>
+{% endblock %}

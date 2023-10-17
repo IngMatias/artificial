@@ -1,0 +1,75 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/learning.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">First Steps in Data Preparation</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<p>
+  The quality of your data significantly affects the validity of your models. Therefore, data preparation is a crucial step in the data science process. In this context, we will explore various aspects of data preparation.
+</p>
+<h2 class="table-content-item">
+  Elimination of Duplicate Data
+</h2>
+<p>
+  Duplicate data can distort your analyses and lead to misleading conclusions. Removing duplicates is a fundamental step to ensure the integrity of your dataset.
+</p>
+<h2 class="table-content-item">
+  Outlier Detection
+</h2>
+<p>
+  Outliers are data points that significantly deviate from the norm.  A common threshold is three standard deviations from the mean. It's essential to identify outliers, but this process requires scientific and contextual validation. Outliers can be the result of measurement errors, human errors, or data collection issues, so <span>handling them requires care</span>span>. It's essential to keep in mind that anomaly detection relies on identifying and analyzing outliers. Common techniques for outlier detection include:
+</p>
+<ul>
+  <li>
+    distance-based
+  </li>
+  <li>
+    density-based
+  </li>
+  <li>
+    distribution-based
+  </li>
+  <li>
+    clustering
+  </li>
+  <li>
+    classification methods
+  </li>
+</ul>
+<h2 class="table-content-item">
+  Standardization and Normalization
+</h2>
+<p>
+  Standardization and normalization transform your data to a standard scale, making it easier to work with. The z-score (standardization) and min-max scaling (normalization) are commonly used methods. Keep in mind that while these techniques are valuable, they may reduce interpretability in some cases.  In some cases, outliers are not just valuable but necessary(k-nn).
+</p>
+<h2 class="table-content-item">
+  Handling Missing Values
+</h2>
+<p>
+  Before substituting missing values, it's crucial to understand why they are missing. Systemic issues, transformation errors, or other factors could be at play. Depending on the extent of missing data, you may choose to remove rows or columns or inject values like the mean, median, mode, or even specific values. Some models can handle missing data, but others cannot, so this step is essential.
+</p>
+<h2 class="table-content-item">
+  Data Type Transformations
+</h2>
+<p>
+  Different models have different data type requirements. For instance, linear regression only accepts numeric data. Thus, you may need to convert categorical data to numeric (or vice versa), a process known as binning.
+</p>
+<h2 class="table-content-item">
+  Feature Selection
+</h2>
+<p>
+  Not all attributes are relevant for prediction, and highly correlated attributes can degrade model performance and reliability. It's essential to remove irrelevant attributes and those with high correlation.
+</p>
+<h2 class="table-content-item">
+  Sampling
+</h2>
+<p>
+  Sampling is the process of selecting a representative subset of your data for analysis. It can reduce computational overhead and speed up processing. One important concept to note is stratified sampling, which ensures that each subgroup within the data is represented proportionally in the sample.
+</p>
+{% endblock %}

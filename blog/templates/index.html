@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/OktaNeue_Bold/OktaNeue_Bold.css' %}">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="icon" type="image/x-icon" href="{% static 'icons/logo.svg' %}">
+    {% block extrahead %}{% endblock %}
+
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <title>{{ title }}</title>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-content">
+        <a class="logo" href="{% url 'home' %}">
+          <img src="{% static 'icons/logo.svg' %}"/>
+          artificial
+        </a>
+        
+        <div class="references">
+          <a class="reference" href="{% url 'linkedin' %}" target="_blank">
+            <img src="{% static 'icons/linkedin.svg' %}"/>
+          </a>
+        </div>
+      </div>
+    </header>
+    
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+      
+    </footer>
+  </body>
+</html>

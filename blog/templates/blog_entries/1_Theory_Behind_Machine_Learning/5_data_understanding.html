@@ -1,0 +1,47 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/brain.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">First Steps in Data Understanding</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+
+{% block entry %}
+<p>
+  Understanding data begins with deciphering the significance of attributes and their connection to real-world scenarios. This initial phase is crucial in the world of data science as it sets the foundation for the entire analysis.
+</p>
+<h2 class="table-content-item">
+  Types and Ranges
+</h2>
+<p>
+  One of the initial tasks in comprehending data is categorizing attributes based on their types and ranges. Attributes can fall into various categories, including real, discrete, binomial, multi-class, multi-nominal, textual, and more. They can further be classified as continuous numeric, integer numeric, monetary, date, time, or categorized (such as "good," "bad," "excellent").
+</p>
+<h2 class="table-content-item">
+  Descriptive Statistics Analysis
+</h2>
+<p>
+  To gain a deeper understanding of these attributes, we utilize descriptive statistics. This involves employing statistical measures like the mean, median, and mode to gauge central tendencies. Additionally, we assess variability through metrics like standard deviation, variance, minimum, maximum, and the interquartile range.
+</p>
+<h2 class="table-content-item">
+  Visual Exploration
+</h2>
+<p>
+  Visualizing data is a central aspect of data analysis. We use graphical representations to fathom how the data is distributed, offering insights that numbers alone cannot provide. Visualizing data through charts, histograms, and other graphical tools helps in uncovering patterns and trends that might otherwise remain hidden.
+</p>
+<h2 class="table-content-item">
+  Analyzing Attribute Impact on the Target Variable
+</h2>
+<p>
+  Understanding how attributes relate to the target variable, particularly in terms of correlation, is pivotal. For this, we rely on graphs and visual representations, with a particular focus on scatter plot matrices and correlation matrices. These tools allow us to assess the strength and direction of relationships between attributes and the target variable.
+</p>
+<h2 class="table-content-item">
+  Detecting Data Anomalies
+</h2>
+<p>
+  As the final step in the data comprehension phase, we look for duplicated, missing, erroneous, and outlier values. Identifying and addressing these issues is essential for ensuring the quality and integrity of the data before moving on to more advanced analyses.
+</p>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="body-content">
+
+    <main>
+      {% for section in sections %}
+        <h3>{{ section.title }}</h3>
+    
+        {% for entry in section.entries %}
+          <div class="entry">
+    
+            <a href={{entry.href}}>
+              <img src="{{ entry.icon }}">
+              <div>
+                <h2>{{ entry.title }}</h2>
+                <time datetime="{{ entry.last_modified_epoch }}">{{ entry.last_modified }}</time>
+              </div>
+            </a>
+    
+          </div>
+        {% endfor %}
+      {% endfor %}
+
+    </main>
+
+    <aside>
+      
+    </aside>
+    
+  </div>
+
+{% endblock %}
+
