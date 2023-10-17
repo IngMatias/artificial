@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Okta Neue';
+    src: url('OktaNeue-Bold.eot');
+    src: local('Okta Neue Bold'), local('OktaNeue-Bold'),
+        url('OktaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('OktaNeue-Bold.woff2') format('woff2'),
+        url('OktaNeue-Bold.woff') format('woff'),
+        url('OktaNeue-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

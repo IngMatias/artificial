@@ -1,0 +1,29 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block extrahead %}
+  <link rel="stylesheet" href="{% static 'styles/entry.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="entry-content">
+  <div class="table-content">
+    <h3>Content</h3>
+    <nav>
+      <ul class="table-content-items">
+        
+      </ul>
+    </nav>
+  </div>
+  <header class="entry-header">
+    {% block header%}{% endblock %}
+  </header>
+  <div class="content">
+    {% block entry %}{% endblock %}
+  </div>
+</div>
+
+<script src="{% static 'scripts/table_content.js' %}"></script>
+
+{% endblock %}

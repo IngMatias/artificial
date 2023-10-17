@@ -1,0 +1,265 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/excel.svg' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Excel For Artificial Intelligence</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<p>
+  Excel offers real-time data visualization and robust computational capabilities. While it can be a valuable tool for many data-related tasks, it should not be deemed obligatory for a proficient data analyst. Data analysts should have the flexibility to choose from a range of specialized data analysis and visualization tools based on the specific requirements of their projects. Excel can be a useful addition to their toolkit, but it should not limit their ability to explore more powerful and tailored solutions for in-depth data analysis.
+</p>
+<h2 class="table-content-item">
+  Cells
+</h2>
+<p>
+  An Excel cell is where a row and column intersect, representing the smallest unit of data in a spreadsheet. It serves as the fundamental building block for organizing, storing, and manipulating data within a worksheet. Cells can be thought of as data containers that can hold various types of information, such as text, numbers, formulas, and even images.
+</p>
+<h2 class="table-content-item">
+  Relative Reference
+</h2>
+<p>
+  In Excel, you can reference other cells by using the equal sign (=) and specifying the column letter followed by the row number. This referencing method is commonly referred to as 'relative cell referencing.' When you use relative references, it means that the formula or function you create will adjust automatically when copied to other cells.
+</p>
+<h2 class="table-content-item">
+  Extend
+</h2>
+<p>
+  One of the most powerful capabilities of Excel is its ability to extend formulas. Excel's formula extending functionality allows you to apply a single formula to multiple cells, automatically adjusting the cell references in a relative manner.
+</p>
+<ol>
+  <li>
+    Move your mouse cursor to the bottom-right corner of the cell containing the formula. When you hover over this area, your cursor will change to a black plus sign.
+  </li>
+  <li>
+    Click and hold the left mouse button while keeping it pressed.
+  </li>
+  <li>
+    While still holding the mouse button, move your cursor to the desired cells where you want the formula to be extended.
+  </li>
+  <li>
+    Release the mouse button.
+  </li>
+</ol>
+<p>
+  If you reference an empty cell, it will be interpreted as a '0' value.
+</p>
+<p>
+  Pay attention to how when you extend a formula from one cell to another, the references in the formula will shift by one cell as well.
+</p>
+<h2>
+  Absolute Reference
+</h2>
+<p>
+  To prevent the previously mentioned issue of unintentional shifting when extending formulas, you can utilize absolute references. Unlike relative references, which adjust when formulas are extended, absolute references remain fixed. To create an absolute reference, you begin with the equal sign (=), followed by a dollar sign ($) before specifying the column letter and a second dollar sign ($) before the row number.
+</p>
+<h2 class="table-content-item">
+  Operators
+</h2>
+<p>
+  Every calculation in Excel begins with the universally recognized equal sign (=), which is followed by various combinations of operands and operations.
+</p>
+<ul>
+  <li>
+    + Addition
+  </li>
+  <li>
+    - Subtraction or Negation
+  </li>
+  <li>
+    * Multiplication
+  </li>
+  <li>
+    / Division
+  </li>
+  <li>
+    % Percent
+  </li>
+  <li>
+    ^ Exponentiation
+  </li>
+</ul>
+<ul>
+  <li>
+    = Equal to
+  </li>
+  <li>
+    &gt; Greater than
+  </li>
+  <li>
+    &lt; Less than
+  </li>
+  <li>
+    >= Greater than or equal to
+  </li>
+  <li>
+    <= Less than or equal to
+  </li>
+  <li>
+    &lt&gt Not equal to
+  </li>
+</ul>
+<ul>
+  <li>
+    & concatenates two values
+  </li>
+</ul>
+<ul>
+  <li>
+    : reference to all the cells between two references(range)
+  </li>
+  <li>
+    , combines multiple references into one reference(union)
+  </li>
+  <li>
+    (space) produces one reference to cells common to the two references(intersection)
+  </li>
+</ul>
+<h2 class="table-content-item">
+  Functions
+</h2>
+<p>
+  As you're already aware, any calculation in Excel initiates with the equals sign. In this section, we will introduce you to simple yet highly useful functions. Functions are predefined behaviors designed to streamline and simplify common tasks, helping you save time and enhance efficiency in your spreadsheet work.
+</p>
+<p>
+  The various inputs of a function in Excel are separated by semicolons (';').
+</p>
+<h3 class="table-content-item">
+  SUM
+</h3>
+<p>
+  Returns the sum of the values of the cell references.
+</p>
+<div class="code">
+  Syntax: =SUM(number1, [number2], ...)
+</div>
+<h3 class="table-content-item">
+  SUMPRODUCT
+</h3>
+<p>
+  Useful for calculating the total of a supermarket receipt where you have price per quantity and quantity, and you want to get the sum of each price multiplied by quantity.
+</p>
+<div class="code">
+  Syntax: =SUMPRODUCT(number1, [number2], ...)
+</div>
+<h3 class="table-content-item">
+  COUNTIF
+</h3>
+<p>
+  Returns the quantity of cells that meet a specified criterion. The criterion is defined within double quotation marks.  
+</p>
+<div class="code">
+  =COUNTIF(range, ">3") counts cells with values greater than 3.
+</div>
+<div class="code">
+  =COUNTIF(range, "tomatoes") counts cells where "tomatoes" appears.
+</div>
+<div class="code">
+  =COUNTIF(range, "<>"&B4) counts cells with values not equal to the value in cell B4.
+</div>
+<h3 class="table-content-item">
+  IF
+</h3>
+<p>
+  Returns a true value when a specified condition is true and a false value when the condition is false.
+</p>
+<div class="code">
+  Syntax: =IF(condition, trueValue, falseValue)
+</div>
+<h3 class="table-content-item">
+  RAND
+</h3>
+<p>
+  Returns a random number between 0 (inclusive) and 1 (exclusive).
+</p>
+<div class="code">
+  =RAND()*100 returns a random number between 0 and 100
+</div>
+<h3 class="table-content-item">
+  RANDBETWEEN
+</h3>
+<p>
+  Returns a random integer between specified lower and upper limits.
+</p>
+<div class="code">
+  Syntax: =RANDBETWEEN(lowerLimit, upperLimit)
+</div>
+<h3 class="table-content-item">
+  RANDARRAY
+</h3>
+<p>
+  Returns an array of random numbers within specified limits.
+</p>
+<div class="code">
+  Syntax: =RANDARRAY(numOfRows, numOfColumns, min, max, integer)
+</div>
+<h3 class="table-content-item">
+  INT
+</h3>
+<p>
+  Returns the whole number part of a value.
+</p>
+<div class="code">
+  Syntax: =INT(value)
+</div>
+<h3 class="table-content-item">
+  MIN and MAX
+</h3>
+<p>
+  Returns the minimum and maximum values in a set of numbers, respectively.
+</p>
+<div class="code">
+  Syntax: =MIN(number1, [number2], ...) and =MAX(number1, [number2], ...)
+</div>
+<h3 class="table-content-item">
+  AVERAGE and STDEV
+</h3>
+<p>
+  Calculate the average and standard deviation of a range of values, respectively.
+</p>
+<div class="code">
+  Syntax: =AVERAGE(range of values) and =STDEV(range of values)
+</div>
+<h3 class="table-content-item">
+  Z-score Normalization
+</h3>
+<p>
+  Standardizes a value using the z-score formula: Standardized value = (actualValue - mean) / standard_dev.
+</p>
+<div class="code">
+  Syntax: STANDARDIZE(num, mean, standard_dev) 
+</div>
+<h3 class="table-content-item">
+  Min-Max Scaling
+</h3>
+<p>
+  Scales a value to a range between 0 and 1 using the formula: x = (x - min) / (max - min).
+</p>
+<div class="code">
+  Excel has no formula for this calculation.
+</div>
+<h2 class="table-content-item">
+  Plot
+</h2>
+<ol>
+  <li>
+    Select Data: First, select the data you want to visualize in your chart. Ensure that your data is organized in a way that makes sense for the chart type you intend to create.
+  </li>
+  <li>
+    Insert Chart: To insert a chart, follow these steps:
+    <ol>
+      <li>
+        Go to the "Insert" tab in the Excel ribbon.
+      </li>
+      <li>
+        Click on "Chart" in the Charts group.
+      </li>
+    </ol>
+  </li>
+</ol>
+  
+{% endblock %}

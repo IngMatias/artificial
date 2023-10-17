@@ -1,0 +1,60 @@
+{% extends 'base_entry.html' %}
+{% load static %}
+
+{% block header %}
+  <img class="icon" src="{% static 'icons/workflow.png' %}"/>
+  <div class="meta-div">
+    <h1 class="title">Types Of Algorithm</h1>
+    <span class="meta">{{ last_modified }}</span>
+  </div>
+{% endblock %}
+
+{% block entry %}
+<h2 class="table-content-item">
+  Supervised Learning
+</h2>
+<p>
+  Supervised learning algorithms operate by ingesting clearly labeled data during the training process and leveraging this information to learn and improve. They utilize labeled data to predict outcomes for other, unlabeled data points.
+</p>
+<p>
+  The term "supervised learning" draws an analogy to a student learning under the guidance of a teacher or expert.
+</p>
+<h3 class="table-content-item">
+  Classification
+</h3>
+<p>
+  Classification involves producing either/or outcomes using binary values (0 for no, 1 for yes).
+</p>
+<h3 class="table-content-item">
+  Regression
+</h3>
+<p>
+  Regression produces results as real numbers, which can be either rounded or include decimal points.
+</p>
+<h2 class="table-content-item">
+  Unsupervised Learning
+</h2>
+<p>
+  Unsupervised learning algorithms work with unlabeled data. They use this unlabeled data to create models and assess relationships between different data points, providing valuable insights.
+</p>
+<h3 class="table-content-item">
+  Clustering
+</h3>
+<p>
+  Many unsupervised learning algorithms specialize in clustering, a process that organizes unlabeled data points into predefined clusters. The objective is to assign each data point to a single cluster without any overlap. While clusters can contain multiple data points, a single data point cannot belong to more than one cluster.
+</p>
+<h3 class="table-content-item">
+  Dimension Reduction
+</h3>
+<p>
+  Dimension reduction involves reducing the number of features (or dimensions) in a dataset while retaining as much information as possible. This can be done for various reasons, including simplifying model complexity, enhancing learning algorithm performance, or facilitating data visualization.
+</p>
+<h2>
+  Hybrid Approaches
+</h2>
+<p>
+  Combining Supervised and Unsupervised Learning
+In some cases, hybrid approaches combine elements of both supervised and unsupervised learning to address specific AI challenges.
+</p>
+
+{% endblock %}
