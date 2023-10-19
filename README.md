@@ -1,4 +1,4 @@
-# Artificial Intelligence notebook
+# Artificial Intelligence notebook: [Link](http://ec2-35-172-193-49.compute-1.amazonaws.com:8080/)
 
 ## About
 The intersection of web development and artificial intelligence, this project serves as a cohesive blog. Its first dimension introduces content generation automations, streamlining the process of adding standardized blog posts efficiently. The second dimension offers theoretical content, serving as the foundational knowledge for any development in this field.
